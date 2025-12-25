@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гонки 2D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🏎️ Гонки 2D</h1>
+            <div class="score">Очки: <span id="score">0</span></div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="controls">
+            <p>Управление: ← → (стрелки влево/вправо)</p>
+            <button id="startBtn">Начать игру</button>
+            <button id="pauseBtn" style="display: none;">Пауза</button>
+        </div>
+        <div id="gameOver" class="game-over" style="display: none;">
+            <h2>Игра окончена!</h2>
+            <p>Ваш счет: <span id="finalScore">0</span></p>
+            <button id="restartBtn">Играть снова</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
+
