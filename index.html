@@ -79,14 +79,9 @@
         <div class="logos-slider" aria-hidden="false">
           <div class="track">
               <div class="item"><img src="assets/logos/nc_kz.png" alt="Қазақстан темір жолы"></div>
-              <div class="item"><img src="assets/logos/embamunaygaz.svg" alt="Эмбамунайгаз"></div>
+              <div class="item"><img src="assets/logos/logo1.png" alt="Эмбамунайгаз"></div>
               <div class="item"><img src="assets/logos/kaztransoil.png" alt="КазТрансОйл"></div>
-              <div class="item"><img src="assets/logos/kmg_ep_catering.svg" alt="KMG EP-Catering"></div>
-              <!-- duplicated for smooth loop -->
-              <div class="item"><img src="assets/logos/nc_kz.png" alt="Қазақстан темір жолы"></div>
-              <div class="item"><img src="assets/logos/embamunaygaz.svg" alt="Эмбамунайгаз"></div>
-              <div class="item"><img src="assets/logos/kaztransoil.png" alt="КазТрансOйл"></div>
-              <div class="item"><img src="assets/logos/kmg_ep_catering.svg" alt="KMG EP-Catering"></div>
+              <div class="item"><img src="assets/logos/logo2.png" alt="KMG EP-Catering"></div>
             </div>
         </div>
       </div>
@@ -131,7 +126,6 @@
             <p>БИК: HSBKKZKX</p>
             <p>ИИК: KZ566018871000064461</p>
             <p>КБЕ: 17</p>
-            <p>Свидетельство по НДС серия 62001 №1042962</p>
             <p>Тел: +7 705 704 91 66, +7 778 897 88 66</p>
             <p>Email: elcleaning.senim.23@mail.ru</p>
             <p>Директор: Нурманов Жанабай Жабасович</p>
@@ -161,13 +155,47 @@
     });
   })();
 
-  // Pause logos slider on hover (for accessibility)
+  // Interactive logos slider: wheel + drag + touch support
   (function(){
-    const slider = document.querySelector('.logos-slider .track');
-    if(!slider) return;
-    const el = slider.parentElement;
-    el.addEventListener('mouseover', ()=>{ slider.style.animationPlayState='paused'; });
-    el.addEventListener('mouseout', ()=>{ slider.style.animationPlayState='running'; });
+    const track = document.querySelector('.logos-slider .track');
+    if(!track) return;
+
+    // Wheel -> horizontal scroll
+    track.addEventListener('wheel', (e) => {
+      if(Math.abs(e.deltaY) > 0){
+        e.preventDefault();
+        track.scrollLeft += e.deltaY;
+      }
+    }, {passive: false});
+
+    // Drag to scroll (mouse)
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      track.classList.add('dragging');
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+    track.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('dragging'); });
+    track.addEventListener('mouseup', () => { isDown = false; track.classList.remove('dragging'); });
+    track.addEventListener('mousemove', (e) => {
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1; // scroll-fast factor
+      track.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch support
+    let touchStartX = 0;
+    let touchStartScroll = 0;
+    track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].pageX; touchStartScroll = track.scrollLeft; }, {passive: true});
+    track.addEventListener('touchmove', (e) => { const x = e.touches[0].pageX; const walk = touchStartX - x; track.scrollLeft = touchStartScroll + walk; }, {passive: true});
+
+    // Prevent image drag
+    track.querySelectorAll('img').forEach(img => img.addEventListener('dragstart', (e) => e.preventDefault()));
   })();
 </script>
 
