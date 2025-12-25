@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profit Senim — Сервис и кейтеринг</title>
+  <meta name="description" content="Profit Senim — услуги кейтеринга, клининг, прачечная, ремонт">
+  <meta name="theme-color" content="#0f172a">
+  <!-- Use a modern system font stack and Inter fallback from Google Fonts for headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap container header-inner">
+      <a class="logo" href="/">
+        <img src="assets/logos/profit_senim.png" alt="Profit Senim"/>
+      </a>
+      <button id="burger" class="burger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
+        <a href="#services">Деятельность</a>
+        <a href="#clients">Заказчики</a>
+        <a href="#about">О компании</a>
+        <a href="#contacts" class="btn-outline">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Команда сервиса и кейтеринга<br>для промышленных и корпоративных клиентов</h1>
+        <p class="lead">Профессиональное обслуживание объектов, кейтеринг, прачечная и ремонт — качественно и в срок.</p>
+        <div class="hero-cta">
+          <a href="#contacts" class="btn-primary">Заказать услугу</a>
+          <a href="#services" class="btn-ghost">Услуги</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Деятельность</h2>
+        <p class="section-note">Мы оказываем комплексные сервисные услуги для предприятий и частных клиентов.</p>
+        <div class="services-grid">
+          <div class="service">
+            <h3>Клининг</h3>
+            <p>Уборка зданий, производственных и офисных помещений, территория.</p>
+          </div>
+          <div class="service">
+            <h3>Прачечная</h3>
+            <p>Стирка текстильных изделий и специальной одежды работников.</p>
+          </div>
+          <div class="service">
+            <h3>Кейтеринг</h3>
+            <p>Обеспечение питанием работников, корпоративные ивенты, выездные кейтеринг‑услуги.</p>
+          </div>
+          <div class="service">
+            <h3>Ремонт</h3>
+            <p>Работы по ремонту нежилых зданий и сооружений (включая проекты ПЧ‑8 Шалкар).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="clients">
+      <div class="container">
+        <h2>Заказчики компании</h2>
+        <p class="note">Часть наших клиентов и партнёров.</p>
+        <div class="logos-slider" aria-hidden="false">
+          <div class="track">
+              <div class="item"><img src="assets/logos/nc_kz.png" alt="Қазақстан темір жолы"></div>
+              <div class="item"><img src="assets/logos/embamunaygaz.svg" alt="Эмбамунайгаз"></div>
+              <div class="item"><img src="assets/logos/kaztransoil.png" alt="КазТрансОйл"></div>
+              <div class="item"><img src="assets/logos/kmg_ep_catering.svg" alt="KMG EP-Catering"></div>
+              <!-- duplicated for smooth loop -->
+              <div class="item"><img src="assets/logos/nc_kz.png" alt="Қазақстан темір жолы"></div>
+              <div class="item"><img src="assets/logos/embamunaygaz.svg" alt="Эмбамунайгаз"></div>
+              <div class="item"><img src="assets/logos/kaztransoil.png" alt="КазТрансOйл"></div>
+              <div class="item"><img src="assets/logos/kmg_ep_catering.svg" alt="KMG EP-Catering"></div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2>О компании</h2>
+          <p>ТОО «Profit Senim» предоставляет широкий спектр сервисных услуг: организация питания, уборка помещений, комплексное обслуживание административных зданий и вахтовых посёлков, проведение мероприятий и ремонтные работы.</p>
+          <p>Наша команда ориентирована на безопасность, качество и соблюдение сроков. Работаем с крупными корпоративными клиентами в нефтегазовой и промышленных сферах.</p>
+        </div>
+        <div class="about-media">
+          <div class="about-cta reveal">
+            <p>Готовы обсудить проект или заказать выездной кейтеринг?</p>
+            <a href="#contacts" class="btn-primary">Заказать звонок</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <h2>Свяжитесь с нами</h2>
+            <p>Наши менеджеры ответят на все вопросы и подготовят коммерческое предложение.</p>
+            <form class="contact-form" action="#" method="post">
+              <input type="text" name="name" placeholder="Ваше имя" required>
+              <input type="email" name="email" placeholder="Ваш email" required>
+              <input type="tel" name="phone" placeholder="Ваш номер" required>
+              <textarea name="message" rows="4" placeholder="Сообщение"></textarea>
+              <button class="btn-primary" type="submit">Отправить</button>
+            </form>
+          </div>
+          <aside class="company-info">
+            <h3>Реквизиты</h3>
+            <p><strong>ТОО «Profit Senim»</strong></p>
+            <p>Юридический адрес: Казахстан, Кызылординская обл., г. Аральск, ул. Кудайберген Султанбаев, 11</p>
+            <p>БИН: 140140028030</p>
+            <p>Банк: Акционерное Общество "Народный Банк Казахстана"</p>
+            <p>БИК: HSBKKZKX</p>
+            <p>ИИК: KZ566018871000064461</p>
+            <p>КБЕ: 17</p>
+            <p>Свидетельство по НДС серия 62001 №1042962</p>
+            <p>Тел: +7 705 704 91 66, +7 778 897 88 66</p>
+            <p>Email: elcleaning.senim.23@mail.ru</p>
+            <p>Директор: Нурманов Жанабай Жабасович</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Profit Senim — Все права защищены</p>
+      <nav class="footer-nav">
+        <a href="#services">Услуги</a>
+        <a href="#clients">Заказчики</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+<script>
+  // Burger menu toggle
+  (function(){
+    const burger = document.getElementById('burger');
+    burger && burger.addEventListener('click', function(){
+      document.documentElement.classList.toggle('nav-open');
+    });
+  })();
+
+  // Pause logos slider on hover (for accessibility)
+  (function(){
+    const slider = document.querySelector('.logos-slider .track');
+    if(!slider) return;
+    const el = slider.parentElement;
+    el.addEventListener('mouseover', ()=>{ slider.style.animationPlayState='paused'; });
+    el.addEventListener('mouseout', ()=>{ slider.style.animationPlayState='running'; });
+  })();
+</script>
+
+</body>
+</html>

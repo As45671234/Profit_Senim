@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120" role="img" aria-label="Profit Senim">
+  <defs>
+    <linearGradient id="gradA" x1="0" x2="1">
+      <stop offset="0" stop-color="#12A9B6"/>
+      <stop offset="1" stop-color="#F6A900"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="none"/>
+
+  <!-- Left mark (rounded square with curved hook) -->
+  <g transform="translate(8,14)">
+    <rect x="0" y="0" width="72" height="72" rx="14" fill="url(#gradA)" />
+    <!-- hook shape (yellow) cutout style to match provided logo -->
+    <path d="M48 40c0 10-8 18-18 18H18v-8h12c6 0 12-6 12-10V34H18v-8h18c6 0 12 6 12 18z"
+          fill="#F5A900" transform="translate(-6,-6)" opacity="0.98"/>
+  </g>
+
+  <!-- Text block: stacked PROFIT / SENIM and tagline -->
+  <g transform="translate(96,36)" font-family="Inter, Arial, sans-serif">
+    <text x="0" y="0" font-size="30" font-weight="800" fill="#0b1220">PROFIT</text>
+    <text x="0" y="34" font-size="30" font-weight="800" fill="#0b1220">SENIM</text>
+    <text x="0" y="66" font-size="12" fill="#475569">cleaning · laundry · catering</text>
+  </g>
+</svg>
